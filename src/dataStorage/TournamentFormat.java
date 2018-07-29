@@ -2,9 +2,10 @@ package dataStorage;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
-import Utilities.RoundDetails;
 import Utilities.FormatType;
+import Utilities.RoundDetails;
 
 public class TournamentFormat {
 	private Map<String, RoundDetails> rounds;
@@ -24,5 +25,13 @@ public class TournamentFormat {
 		RoundDetails details = rounds.get(name);
 		
 		return details.getType();
+	}
+	
+	public Set<String> getRounds() {
+		return rounds.keySet();
+	}
+	
+	public RoundDetails getDetails(String round) {
+		return rounds.get(round);
 	}
 }

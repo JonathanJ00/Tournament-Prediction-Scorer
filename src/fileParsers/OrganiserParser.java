@@ -49,14 +49,17 @@ public class OrganiserParser {
 					String temp = nextCell.getStringCellValue();
 					String[] tokens = temp.split(" ");
 					
-					if (tokens[0].equals("Groups"))
-					{
+					switch (tokens[0]) {
+					case "Groups":
 						type = FormatType.GROUP;
 						numGroups = Integer.parseInt(tokens[1]);
-					}
-					else
-					{
+						break;
+					case "Knockout":
 						type = FormatType.KNOCKOUT;
+						numGroups = 0;
+						break;
+					case "Tiebreak":
+						type = FormatType.TIEBREAK;
 						numGroups = 0;
 					}
 					
