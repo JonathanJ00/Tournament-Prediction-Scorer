@@ -5,6 +5,12 @@ import java.util.List;
 
 import Utilities.FormatType;
 
+/**
+ * Class to hold details of a predected or actual result for a group format round.
+ * 
+ * @author Jonathan
+ *
+ */
 public class GroupResult implements IResult {
 	private final FormatType format = FormatType.GROUP;
 	private List<String> teams;

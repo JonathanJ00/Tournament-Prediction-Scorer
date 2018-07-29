@@ -3,6 +3,12 @@ package rounds;
 import Utilities.FormatType;
 import results.IResult;
 
+/**
+ * Class to store details of a Tiebreak round of a tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class TiebreakRound implements IRound {
 	private final FormatType format = FormatType.TIEBREAK;
 	private String name;

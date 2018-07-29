@@ -3,6 +3,12 @@ package rounds;
 import Utilities.FormatType;
 import results.IResult;
 
+/**
+ * Class to store details of a group round of a tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class GroupRound implements IRound {
 	private final FormatType format = FormatType.GROUP;
 	private String name;

@@ -7,6 +7,12 @@ import java.util.Set;
 import Utilities.FormatType;
 import Utilities.RoundDetails;
 
+/**
+ * Class to hold details about the format of the tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class TournamentFormat {
 	private Map<String, RoundDetails> rounds;
 	

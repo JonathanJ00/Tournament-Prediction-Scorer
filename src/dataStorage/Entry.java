@@ -5,6 +5,12 @@ import java.util.List;
 
 import rounds.IRound;
 
+/**
+ * Class to hold details about an individual entry to the competition.
+ * 
+ * @author Jonathan
+ *
+ */
 public class Entry {
 	private String name;
 	private List<IRound> rounds;

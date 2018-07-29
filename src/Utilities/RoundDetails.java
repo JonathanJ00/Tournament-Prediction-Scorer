@@ -1,5 +1,11 @@
 package Utilities;
 
+/**
+ * Class to hold details of a round within the tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class RoundDetails {
 	private FormatType type;
 	private int score;
@@ -7,6 +13,15 @@ public class RoundDetails {
 	private int bonus;
 	private int numGroups;
 	
+	/**
+	 * Constructor to initialise instance of class with provided details.
+	 * 
+	 * @param type Type of round as FormatType.
+	 * @param score Points available for each correct team in this round as int.
+	 * @param numTeams Number of teams in this round as an int.
+	 * @param numGroups Number of groups within this round as an int.
+	 * @param bonus Bonus available for getting teams in right order in this round.
+	 */
 	public RoundDetails(FormatType type, int score, int numTeams, int numGroups, int bonus) {
 		this.type = type;
 		this.score = score;

@@ -3,6 +3,12 @@ package rounds;
 import Utilities.FormatType;
 import results.IResult;
 
+/**
+ * Class to store details of a Knockout round of a tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class KnockoutRound implements IRound {
 	private final FormatType format = FormatType.KNOCKOUT;
 	private String name;

@@ -5,6 +5,12 @@ import java.util.List;
 
 import Utilities.FormatType;
 
+/**
+ * Class to hold details of a predected or actual result for a knockout format round.
+ * 
+ * @author Jonathan
+ *
+ */
 public class TiebreakResult implements IResult {
 	private final FormatType format = FormatType.TIEBREAK;
 	private List<String> teams;

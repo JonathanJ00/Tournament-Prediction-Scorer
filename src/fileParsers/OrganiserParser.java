@@ -14,8 +14,21 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import Utilities.FormatType;
 import dataStorage.TournamentFormat;
 
+/**
+ * Class to parse the organisers spreadsheet holding details of the tournament.
+ * 
+ * @author Jonathan
+ *
+ */
 public class OrganiserParser {
 	
+	/**
+	 * Takes a file and extracts the details of the tournaments format from it.
+	 * 
+	 * @param file File containing tournaments format.
+	 * @return Tournament format details as a TournamentFormat object.
+	 * @throws IOException If there is a problem reading the file.
+	 */
 	public TournamentFormat parseFormat(File file) throws IOException {
 		TournamentFormat format = new TournamentFormat();
 		
@@ -25,7 +38,8 @@ public class OrganiserParser {
 		Sheet firstSheet = workbook.getSheetAt(0);
 		Iterator<Row> iterator = firstSheet.iterator();
 		
-		Row firstRow = iterator.next();
+		//Ignore first row
+		iterator.next();
 		
 		while (iterator.hasNext()) {
 			Row nextRow = iterator.next();
