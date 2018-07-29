@@ -14,6 +14,9 @@ public class ResultFactory {
 		case KNOCKOUT:
 			round = new KnockoutResult();
 			break;
+		case TIEBREAK:
+			round = new TiebreakResult();
+			break;
 		default:
 			round = null;
 			break;
