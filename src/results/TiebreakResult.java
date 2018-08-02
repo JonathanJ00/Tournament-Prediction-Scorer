@@ -35,4 +35,8 @@ public class TiebreakResult implements IResult {
 		return format;
 	}
 
+	@Override
+	public void addTeam(String team) {
+		teams.add(team);
+	}
 }

@@ -14,5 +14,6 @@ public interface IResult {
 
 	public void setTeams(List<String> teams);
 	public List<String> getTeams();
+	public void addTeam(String team);
 	public FormatType getFormat();
 }

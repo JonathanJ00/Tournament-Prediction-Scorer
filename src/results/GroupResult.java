@@ -35,4 +35,8 @@ public class GroupResult implements IResult {
 		return format;
 	}
 
+	@Override
+	public void addTeam(String team) {
+		teams.add(team);
+	}
 }

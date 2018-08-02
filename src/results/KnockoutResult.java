@@ -34,4 +34,9 @@ public class KnockoutResult implements IResult {
 	public FormatType getFormat() {
 		return format;
 	}
+
+	@Override
+	public void addTeam(String team) {
+		teams.add(team);
+	}
 }

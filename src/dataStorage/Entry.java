@@ -31,6 +31,10 @@ public class Entry {
 		return rounds;
 	}
 	
+	public void addRound(IRound round) {
+		rounds.add(round);
+	}
+	
 	public void setRounds(List<IRound> rounds) {
 		this.rounds = rounds;
 	}
