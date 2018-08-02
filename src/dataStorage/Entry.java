@@ -35,6 +35,16 @@ public class Entry {
 		rounds.add(round);
 	}
 	
+	public IRound getRound(String name) {
+		for (IRound round: rounds) {
+			if (round.getName().equals(name)) {
+				return round;
+			}
+		}
+		
+		return null;
+	}
+	
 	public void setRounds(List<IRound> rounds) {
 		this.rounds = rounds;
 	}

@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -68,10 +69,17 @@ public class EntryParser {
 				
 				if (indexes.contains(columnIndex)) {
 					IResult thisResult = results.get(columnIndex);
-					String teamName = nextCell.getStringCellValue().trim();
+					String teamName;
+					
+					if (nextCell.getCellTypeEnum() == CellType.STRING) {
+						teamName = nextCell.getStringCellValue().trim();
+					}
+					else {
+						teamName = Double.toString(nextCell.getNumericCellValue());
+					}
 					
 					if ((thisResult.getFormat() == FormatType.GROUP) && (teamName.startsWith("Group"))) {
-						break;
+						continue;
 					} 
 					else {
 						thisResult.addTeam(teamName);
